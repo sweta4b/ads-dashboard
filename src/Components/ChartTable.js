@@ -15,8 +15,18 @@ function ChartTable({ data }) {
 
     const sortedData = [...data].sort((a, b) => {
         const order = sortOrder === 'ascending' ? 1 : -1;
-        return order * (a[sortBy] - b[sortBy])
-    })
+        if (typeof a[sortBy] === "string") {
+            if (a[sortBy] > b[sortBy]) {
+                return order * 1;
+            }
+            if (a[sortBy] < b[sortBy]) {
+                return order * -1;
+            }
+            return 0;
+        } else {
+            return order * (a[sortBy] - b[sortBy]);
+        }
+    });
 
     const handleSort = (property) => {
         if (sortBy === property) {
