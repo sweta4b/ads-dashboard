@@ -35,22 +35,21 @@ function Table({ data }) {
             ) : (
                 <i className='fa fa-sort-desc'></i>
             )
-        }else{
+        } else {
             return <i className='fa fa-unsorted text-gray-200'></i>
         }
-        return null;
     };
 
     return (
         <div>
-            <div className='border-2 bg-white rounded-md text-xs md:text-sm '>
-                <div className='flex px-4 justify-between items-center py-2 border-b '>
+            <div className='border-2 bg-white rounded-md text-xs md:text-sm overflow-auto scrollbar-hide max-h-96'>
+                <div className=' flex px-4 sticky top-0 bg-white z-1 justify-between items-center py-2 border-b '>
                     <h1 className='text-left py-2 font-semibold'>Ad Insights</h1>
                     <i className='fa fa-question-circle-o text-gray-400'></i>
                 </div>
-                <table className='text-right leading-10 w-full'>
+                <table className='text-right  leading-10 w-full'>
                     <thead>
-                        <tr className='border-b text-sm leading-10 '>
+                        <tr className='border-b text-sm leading-10 whitespace-nowrap sticky top-10 bg-white z-1 '>
                             <th
                                 className='font-semibold px-4 cursor-pointer text-left'
                                 onClick={() => handleSort('campaigns')}
