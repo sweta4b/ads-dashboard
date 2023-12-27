@@ -20,7 +20,7 @@ function Ads() {
             navigate('/mediaAdForm')
         } else if (mediaAdChecked) {
             navigate('/mediaAdForm')
-        } else if(textAdChecked){
+        } else if (textAdChecked) {
             navigate('/textAdForm')
         }
         else {
@@ -40,7 +40,7 @@ function Ads() {
                             <input type="checkbox" id="checkbox" checked={textAdChecked} onChange={handleTextAd} className="absolute top-2 left-2 md:z-10" />
                             <div className="overflow-hidden rounded-lg shadow-md">
                                 <img src={textImage} alt="Card Background" className="w-full md:h-[300px] h-[200px] object-cover" />
-                                <div className="p-2 bg-gray-300 bg-opacity-50">
+                                <div className="p-2 bg-gray-200 bg-opacity-50">
                                     <p className='text-gray-600'>Create</p>
                                     <h3 className='font-bold'>Text Ad</h3>
                                 </div>
@@ -52,16 +52,14 @@ function Ads() {
                             <input type="checkbox" id="checkbox" checked={mediaAdChecked} onChange={handleMediaAd} className="absolute top-2 left-2 md:z-10" />
                             <div className="overflow-hidden rounded-lg shadow-md">
                                 <img src={mediaImage} alt="Card Background" className="w-full md:h-[300px] h-[200px] object-cover" />
-                                <div className="p-2 bg-gray-300 bg-opacity-50">
+                                <div className="p-2 bg-gray-200 bg-opacity-50">
                                     <p className='text-gray-600'>Create</p>
                                     <h3 className='font-bold'>Media Ad</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
             <div className='flex md:justify-end justify-center'>
                 <button className='bg-blue-500 text-white hover:border-slate-800 md:px-12 md:py-3 md:mt-0 px-12 py-2  mt-4  rounded  font-semibold ' onClick={redirectToFillData}>Next</button>
